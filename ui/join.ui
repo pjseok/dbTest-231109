@@ -258,7 +258,7 @@
      <string>ID CHECK</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="address_edit_2">
+   <widget class="QLineEdit" name="name_edit">
     <property name="geometry">
      <rect>
       <x>200</x>
