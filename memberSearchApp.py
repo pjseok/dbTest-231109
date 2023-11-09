@@ -58,12 +58,12 @@ class MainWindow(QMainWindow, form_class):
         memberpw = self.password_edit.text()   # 회원비밀번호 입력된 텍스트 가져오기
         name = self.name_edit.text()  # 회원이름 텍스트 가져오기
         phone = self.phone_edit.text() # 회원전화번호 입력된 텍스트 가져오기
-        adress = self.adress_edit.text() # 회원주소 텍스트 가져오기
+        address = self.adress_edit.text() # 회원주소 텍스트 가져오기
         age = self.age_edit.text() # 회원나이 텍스트 가져오기
 
         conn = pymysql.connect(host='localhost', user='root', password='12345', db='memberdb')
 
-        sql = f"UPDATE member SET memberpw = '{memberpw}', name='{name}', phone='{phone}', address ='{adress}', age='{age}' WHERE memberid = '{memberid}'"
+        sql = f"UPDATE member SET memberpw = '{memberpw}', name='{name}', phone='{phone}', address ='{address}', age='{age}' WHERE memberid = '{memberid}'"
 
         cur = conn.cursor()  # 커서 생성
         cur.execute(sql)  # SQL문 실행
